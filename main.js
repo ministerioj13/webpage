@@ -14,29 +14,29 @@ $(document).ready(function (){
     if (nombre.length > 0){
       stats.append('<div style="color: green;">Nombre valido</div>');
     }else{
-      stats.append('<div style="color: red;">Por favor ingrese su nombre</div>');
       event.preventDefault();
+      stats.append('<div style="color: red;">Por favor ingrese su nombre</div>');
     }
-    if (telefono.length > 11 && telefono.length < 15){
+    if (telefono.length > 11 && telefono.length < 15 && telefono.includes('+')){
       stats.append('<div style="color: green;">Telefono valido</div>');
     } else{
       if (telefono.length === 0){
-        stats.append('<div style="color: red;">Ingrese su numero de telefono</div>');
         event.preventDefault();
+        stats.append('<div style="color: red;">Ingrese su telefono</div>');
       } else{
-        stats.append('<div style="color: red;">Formato de telefono invalido</div>');
         event.preventDefault();
+        stats.append('<div style="color: red;">Formato de telefono invalido</div>');
       }
     }
     if (email.length > 5 && email.includes('@') && email.includes('.')){
       stats.append('<div style="color: green;">Email valido</div>');
     } else{
-      stats.append('<div style="color: red;">Email invalido</div>');
       event.preventDefault();
+      stats.append('<div style="color: red;">Email invalido</div>');
     }
     if (mensaje.length === 0){
-      stats.append('<div style="color: red;">Su mensaje esta vacio</div>')
       event.preventDefault();
+      stats.append('<div style="color: red;">Su mensaje esta vacio</div>')
     } else{
       stats.append('<div style="color: green;">Mensaje aprobado</div>')
     }
