@@ -27,7 +27,7 @@ footer{
         align-content: center;
         vertical-align: center;
 }
-.col-md-4, footer, .content{
+.col-md-4, footer, .content, .posts{
         padding-left: 5%;
         padding-right: 5%;
         width: 100%;
