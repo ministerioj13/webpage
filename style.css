@@ -27,7 +27,7 @@ footer{
         align-content: center;
         vertical-align: center;
 }
-.col-md-4, footer, .content, .posts{
+.col-md-4, footer, .content, .posts, .countdown, .socialMedia{
         padding-left: 5%;
         padding-right: 5%;
         width: 100%;
@@ -38,4 +38,30 @@ hr{
 }
 .tag{
         background-color: #C03B7A;
+}
+.socialMedia{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.btn-red-social{
+	padding: 2% 0;
+	display: inline-block;
+	min-width: 8%;
+	border-radius: 5%;
+	background: #757272;
+	color: #fff;
+	font-size: 175%;
+	margin: 0 2%;
+	transition: .3s ease all;
+  text-align: center;
+}
+#cuenta{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 100px;
+  background-color: #eedd79;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
