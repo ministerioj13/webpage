@@ -1,0 +1,44 @@
+h1, h2{
+        color: #C03B7A;
+}
+h3, h4{
+        color: #703E8F;
+}
+body{
+        background-color: #EEDD79;
+}
+.navbar{
+        background-color: #141E4D;
+        color: gray;
+}
+p{
+        color: #141E4D;
+}
+footer{
+        color: gray;
+}
+.jumbotron{
+        padding: 7%;
+        width: 100%;
+        align-self: center;
+}
+.jumbotron{
+        padding: 8%;
+}
+.container, .row{
+        text-align: left;
+        align-content: center;
+        vertical-align: center;
+}
+.col-md-4, footer, .content{
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%;
+        vertical-align: super;
+}
+hr{
+        color: white;
+}
+.tag{
+        background-color: #C03B7A;
+}

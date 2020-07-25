@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MJ13 - Contacto</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style type="text/css">
+        	.contact_us{
+        		padding-left: 5%;
+        		padding-right: 5%;
+        	}
+        </style>
+				<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+				<script src="main.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="navbar-collapse">
+					<img src="logo.png" width="3%" height="3%">
+					<a href="index.html" class="navbar-brand" style="color: gray;">Ministerio J13</a>&nbsp&nbsp&nbsp&nbsp
+					<a class="nav-item" href="index.html" style="color: gray;">Inicio</a>&nbsp&nbsp&nbsp&nbsp
+					<a class="nav-item" href="about.html" style="color: gray;">Sobre nosotros...</a>&nbsp&nbsp&nbsp&nbsp
+					<a class="nav-item" href="contact.html" style="color: gray;">Contactanos</a>&nbsp&nbsp&nbsp&nbsp
+					<a class="nav-item" href="activities.html" style="color: gray;">Actividades</a>
+				</div>
+			</nav>
+		</header>
+		<div class="content">
+			<address>
+			    Quetzaltenango, Quetzaltenango, Guatemala<br />
+			    Centroamerica<br />
+			    <abbr title="Telefono">Telefono:</abbr>
+			    +502 ####-###
+			</address>
+
+			<address>
+			    <strong>Capacitaciones:</strong>   <a href="mailto:Ministerioj13@gmail.com">Ministerioj13@gmail.com</a><br />
+			    <strong>Peticiones:</strong> <a href="mailto:Ministerioj13@gmail.com">Ministerioj13@gmail.com</a>
+			</address>
+		</div>
+		<div class="contact_us">
+			<form action="https://formspree.io/ministerioj13@gmail.com" method="post">
+				<label>Nombre&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+				<input type="text" class="name" placeholder="Nombre (Apellido)" required>
+				<br>
+				<label>Telefono&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+				<input type="text" class="phone" placeholder="+502 1234 5678" required>
+				<br>
+				<label>Correo Electronico&nbsp</label>
+				<input type="email" class="email" placeholder="algo@ejemplo.com" required>
+				<br>
+				<label>Mensaje</label>
+				<br>
+				<textarea type="text" class="message" placeholder="Mensaje..." style="width: 50%; height: 100px;" required></textarea>
+				<br>
+				<div class="status">
+
+				</div>
+				<br>
+				<button type="submit" class="submit">Enviar</button>
+			</form>
+		</div>
+		<footer>
+			<hr>
+			Facebook: &#64ministerioj13<br>
+            &copy; 2020 - Ministerio J13
+		</footer>
+	</body>
+</html>
