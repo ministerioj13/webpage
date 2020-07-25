@@ -2,7 +2,7 @@ simplyCountdown('#cuenta', {
             year: 2020, // required
             month: 7, // required
             day: 26, // required
-            hours: 12, // Default is 0 [0-23] integer
+            hours: 12, // Default is 0 [0-23] integer. Is our time - 6 hours.
             minutes: 0, // Default is 0 [0-59] integer
             seconds: 0, // Default is 0 [0-59] integer
             words: { //words displayed into the countdown
@@ -17,8 +17,9 @@ simplyCountdown('#cuenta', {
             inlineClass: 'simply-countdown-inline', //inline css span class in case of inline = true
             // in case of inline set to false
             enableUtc: true, //Use UTC as default
-            onEnd: function() { 
+            onEnd: function() {
               alert('Bienvenidos a nuestra reunion de domingo!');
+              window.location.href = "https://us02web.zoom.us/j/88505585843?pwd=NWFJZzRkMGdINll4VFNzNzZJNjVVQT09";
               return; }, //Callback on countdown end, put your own function here
             refresh: 1000, // default refresh every 1s
             sectionClass: 'simply-section', //section css class

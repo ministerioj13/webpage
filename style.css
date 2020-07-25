@@ -60,8 +60,26 @@ hr{
 	justify-content: center;
 	margin-bottom: 100px;
   background-color: #eedd79;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.simply-section{
+  background-color: #eedd79;
+  width: 15%;
+  margin: 0 1%;
+  border-radius: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #141E4D;
+}
+.simply-amount{
+  display: block;
+  color: #141E4D;
 }
