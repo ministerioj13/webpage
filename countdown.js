@@ -18,7 +18,7 @@ simplyCountdown('#cuenta', {
             // in case of inline set to false
             enableUtc: true, //Use UTC as default
             onEnd: function() {
-              alert('Bienvenidos a nuestra reunion de domingo!');
+              //alert('Bienvenidos a nuestra reunion de domingo!');
               window.location.href = "https://us02web.zoom.us/j/88505585843?pwd=NWFJZzRkMGdINll4VFNzNzZJNjVVQT09";
               return; }, //Callback on countdown end, put your own function here
             refresh: 1000, // default refresh every 1s
