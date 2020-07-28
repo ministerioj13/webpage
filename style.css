@@ -38,6 +38,7 @@ hr{
 }
 .tag{
         background-color: #C03B7A;
+        border-radius: 5px;
 }
 .socialMedia{
   padding-left: 5%;
@@ -68,6 +69,7 @@ hr{
   display: flex;
   justify-content: center;
   margin-bottom: 0;
+  border-radius: 5px;
 }
 .simply-section{
   background-color: #eedd79;
@@ -89,4 +91,7 @@ hr{
   text-align: center;
   padding-top: 15%;
   padding-bottom: 15%;
+}
+img, input{
+  border-radius: 5px;
 }
