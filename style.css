@@ -95,3 +95,11 @@ hr{
 img, input{
   border-radius: 5px;
 }
+.insc{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  border-radius: 5:
+  border: 5px;
+  border-color: #703E8F;
+}

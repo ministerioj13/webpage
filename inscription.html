@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MJ13 - Inscripciones</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="logo.png" type="img/png">
+    <style>
+      input, textarea{
+        border-radius: 0%;
+        border-color: #141E4D;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 35%;
+        border: 0.5%;
+      }
+      .Info{
+        padding-left: 40%;
+      }
+      h4{
+        display: inline;
+        color: #703E8F;
+      }
+      form{
+        text-align: center;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="send.js"></script>
+  </head>
+  <body>
+		<header>
+			<nav class="navbar">
+				<div class="navbar-collapse">
+					<img src="logo.png" width="4%" height="4%">
+					<a href="index.html" class="navbar-brand" style="color: gray;">Ministerio J13</a>&nbsp&nbsp&nbsp&nbsp
+					<a class="nav-item" href="about.html" style="color: gray;">Sobre nosotros...</a>&nbsp&nbsp&nbsp&nbsp
+					<a class="nav-item" href="contact.html" style="color: gray;">Contactanos</a>&nbsp&nbsp&nbsp&nbsp
+					<a class="nav-item" href="activities.html" style="color: gray;">Actividades</a>&nbsp&nbsp&nbsp&nbsp
+					<a class="nav-item" href="material.html" style="color: gray;">Material</a>
+				</div>
+			</nav>
+		</header>
+    <div class="insc">
+      <h1>Ministerio J13</h1>
+      <h3>¿Cómo estudiar la palabra de Dios?</h3>
+      <hr>
+      <h2 style="text-align: center;">Inscripción</h2>
+      <p>Este es el formulario de inscripción a esta capacitación. Te recordamos llenarlo para que puedas acceder a ella. Las inscripciones se cierran el 6-8-2020 a las 16:00.</p>
+      <hr>
+      <div class="Info">
+        <h4>Tema</h4>&nbsp&nbsp&nbsp&nbsp<p style="display: inline;">¿Como estudiar la palabra de Dios?</p><br>
+        <h4>Dia</h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<p style="display: inline;">6/8/2020</p><br>
+        <h4>Hora</h4>&nbsp&nbsp&nbsp&nbsp&nbsp<p style="display: inline;">17:00 hrs</p><br>
+      </div>
+      <hr>
+      <div class="inscription-form">
+        <form action="https://formspree.io/ministerioj13@gmail.com" method="post">
+          <h5>Nombre</h5>
+          <input type="text" class="name" name="Nombre" placeholder="Nombre">
+          <br>
+          <h5>Email</h5>
+          <input type="text" class="email" name="Email" placeholder="algo@ejemplo.com">
+          <br>
+          <h5>¿Qué esperas de esta capacitación?</h5>
+          <textarea name="text" class="comment" name="Comentario" rows="4" cols="60" placeholder="Tu opinion aqui"></textarea>
+          <br>
+          <div class="status">
+
+          </div>
+          <input type="submit" name="submit" value="Inscribirme" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+    <footer>
+      <hr>
+      Facebook: &#64ministerioj13 Instagram: &#64ministerioj13<br>
+      &copy; 2020 - Ministerio J13
+    </footer>
+  </body>
+</html>
