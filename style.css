@@ -103,3 +103,7 @@ img, input{
   border: 5px;
   border-color: #703E8F;
 }
+.wrapper{
+  padding-left: 5%;
+  padding-right: 5%;
+}
