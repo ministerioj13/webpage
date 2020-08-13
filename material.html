@@ -19,6 +19,7 @@
 					color: white;
 				}
 			</style>
+			<!-- <script src="access.js"></script> -->
 	</head>
 	<body>
 		<header>
@@ -37,12 +38,22 @@
 			<div class="tag">
 				<h3>Domingo - 9/8/2020 (Y vos ¿dónde estabas?)</h3>
 				&nbsp&nbsp Alejandro Samayoa
-				<p><a target="_blank" class="btn btn-light">Descargar</a></p>
+				<p><a href="y_vos_donde_estabas.pdf" target="_blank" class="btn btn-info">Descargar</a></p>
+			</div>
+			<div class="tag">
+				<h3>Domingo - 9/8/2020 (El Amor)</h3>
+				&nbsp&nbsp Alejandro Samayoa
+				<p><a href="El_Amor.pdf" target="_blank" class="btn btn-info">Descargar</a></p>
 			</div>
 			<div class="tag">
 				<h3>Sabado - 8/8/2020 (5 Maravillas)</h3>
 				&nbsp&nbsp Josué Martínez
 				<p><a href="Juan6.1-24.pptx" target="_blank" class="btn btn-info">Descargar</a></p>
+			</div>
+			<div class="tag">
+				<h3>Capacitación - 6/8/2020 (Deleite)</h3>
+				&nbsp&nbsp MJ13
+				<p><button target="_blank" class="btn btn-info" onclick="access();">Descargar</button></p>
 			</div>
 			<div class="tag">
 				<h3>Domingo - 2/8/2020 (Revolución 180)</h3>
@@ -87,9 +98,19 @@
 			<div class="tag">
 				<h3>Jueves - 9/7/2020</h3>
 				&nbsp&nbsp Alejandro Samayoa
-				<p><a target="_blank" class="btn btn-light">Descargar</a></p>
+				<p><a target="_blank" class="btn btn-light" id="Deleite">Descargar</a></p>
 			</div>
 		</div>
+		<script type="text/javascript">
+			function access(){
+				var password = prompt("Ingrese la contraseña");
+				if (password == "mj13"){
+					document.location.href="Deleite_MJ13_Material.pdf";
+				} else{
+					alert("Contraseña incorrecta");
+				}
+			}
+		</script>
 		<footer>
 			<hr>
 			Facebook: &#64ministerioj13 Instagram: &#64ministerioj13 Twitter: &#64ministerioj13<br>

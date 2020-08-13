@@ -2,7 +2,7 @@ console.log('It works');
 
 $(document).ready(function (){
   $('.inscription-form').click(function (event){
-    console.log('Clicke button');
+    console.log('Clicked button');
 
     var nombre = $('.name').val();
     var email = $('.email').val();
