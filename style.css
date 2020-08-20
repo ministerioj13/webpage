@@ -36,6 +36,9 @@ footer{
 hr{
         color: white;
 }
+a{
+  text-decoration: none;
+}
 .tag{
         background-color: #C03B7A;
         border-radius: 5px;
