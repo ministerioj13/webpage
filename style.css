@@ -13,6 +13,7 @@ p, .login{
 }
 footer{
         color: gray;
+        text-align: center;
 }
 .jumbotron{
         padding: 7%;
@@ -27,11 +28,15 @@ footer{
         align-content: center;
         vertical-align: center;
 }
-.col-md-4, footer, .content, .posts, .countdown, .socialMedia{
+.col-md-4, footer, .content, .posts, .countdown{
         padding-left: 5%;
         padding-right: 5%;
         width: 100%;
         vertical-align: super;
+}
+.socialMedia{
+        width: 55%;
+        height: 75%;
 }
 hr{
         color: white;
