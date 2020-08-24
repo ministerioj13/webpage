@@ -9,17 +9,16 @@ Sortable.create(lista, {
   },
   group: "list-tags",
   store: {
-    //Funcion para guardar los elementos
-    set: (sortable) => {
-      const: orden = sortable.toArray();
-      //console.log(orden);
-      localStorage.setItem(sortable.options.group.name, orden.join('-'));
-    },
-    //Obtenemos el orden de la lista
-    get: (sortable) => {
-      const orden = localStorage.getItem('list-tags');
-      //console.log(orden);
-      return orden ? orden.split('-') : [];
-    }
-  }
+		// Guardamos el orden de la lista
+		set: (sortable) => {
+			const orden = sortable.toArray();
+			localStorage.setItem(sortable.options.group.name, orden.join('|'));
+		},
+
+		// Obtenemos el orden de la lista
+		get: (sortable) => {
+			const orden = localStorage.getItem(sortable.options.group.name);
+			return orden ? orden.split('|') : [];
+		}
+	}
 });
