@@ -3,6 +3,7 @@
 	<head>
 		<title>MJ13 - Actividades</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 				<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700,900&display=swap" rel="stylesheet">
 				<link rel="stylesheet" href="style.css">
@@ -37,8 +38,8 @@
 			<h2>Proximo Evento</h2>
 			<div id="cuenta"></div>
 		</div>
-		<div class="posts" style="padding-top: 1%;">
-			<div class="tag" id="devocional">
+		<div class="posts" style="padding-top: 1%;" id="lista">
+			<div class="tag" id="devocional" data-id="devocional">
 				<h3>Devocional del dia</h3>
 				<p>La respuesta amable calma el enojo, pero la agresiva echa leña al fuego. <br>
 Proverbios 15:1 NVI
@@ -54,31 +55,31 @@ Por eso, hoy les animo a responder con amor a alguien que busqué conflicto.
 <br><br>
 Recuerden que los esperamos hoy a las 6pm!!! 😉</p>
 			</div>
-			<div class="tag">
+			<div class="tag" data-id="peticiones">
 				<h3>Peticiones</h3>
 				<p>Recordemos que una de nuestras herramientas mas fuertes es la oracion. Si tienes alguna peticion o accion de gracias la puedes comentar con cualquier integrante de nuestro equipo o escribirnos por Facebook o correo electronico. Puedes estar seguro que estaremos orando por ti, tu familia y tu peticion o accion de gracias. Puedes hacerlo a traves de nuestra seccion de contacto.</p>
 				<p style="padding-bottom: 1%;"><a class="btn btn-info" href="mailto:ministerioj13@gmail.com" target="_blank">Hacer peticion &raquo;</a></p>
 			</div>
-			<div class="tag">
+			<div class="tag" data-id="estudio">
 					<h3>Estudio Biblico</h3>
 					<p>El próximo Jueves tendremos un nuevo tema, seguiremos estudiando el evangelio de Juan. Preparnse que sustentará
 					de gran bendicion, recordemos que siempre aprendemos de la palabra. Esperamos puedan asistir y disfrutemos un gran tiempo con la palabra
 					de Dios. Recuerda traer donde anotar, con que escribir, tu disposición para aprender y sobre todo tu Biblia.</p>
 					<p style="padding-bottom: 1%;"><a class="btn btn-success" href="https://us02web.zoom.us/j/89751779761" target="_blank">Unirme &raquo;</a></p>
 			</div>
-			<div class="tag">
+			<div class="tag" data-id="grupo">
 					<h3>Reunion del Domingo</h3>
 					<p>El próximon domingo tendremos un invitado especial con el tema "Faraones 2020" esperamos que puedan aprender y reflexionar
 					para este tiempo. Recuerden que siempre tenemos actividades y alabanza para dar gloria a Dios. Ademas siempre
 				tenemos nuestro tiempo de convivencia para compartir y pasar un buen rato.</p>
 					<p style="padding-bottom: 1%;"><a class="btn btn-success" href="https://us02web.zoom.us/j/89751779761" target="_blank">Unirme &raquo;</a></p>
 			</div>
-			<div class="tag" style="text-align: center;">
+			<div class="tag" style="text-align: center;" data-id="versiculo">
 				<h3>Versiculo</h3>
 				<img src="Versiculo.png" height="50%" width="50%" style="padding-bottom: 1%;">
 			</div>
 			<br>
-			<div class="tag">
+			<div class="tag" data-id="capacitacion">
 				<h3>¡¡¡Capacitación!!!</h3>
 				<p>
 						Atentos, se viene nuestro taller sobre herramientas virtuales. Si sientes las necesidad de organizar
@@ -94,6 +95,8 @@ Recuerden que los esperamos hoy a las 6pm!!! 😉</p>
 		</div>
 		<script src="simplyCountdown.min.js"></script>
 		<script src="countdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+		<script src="move.js"></script>
 		<footer>
 			<hr>
 			Facebook: &#64ministerioj13&nbsp&nbsp Instagram: &#64ministerioj13&nbsp&nbsp Twitter: &#64ministerioj13<br>

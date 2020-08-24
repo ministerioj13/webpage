@@ -48,6 +48,7 @@ a{
 .tag{
         background-color: #C03B7A;
         border-radius: 5px;
+        cursor: move;
 }
 .socialMedia{
   padding-left: 5%;
@@ -115,4 +116,11 @@ img, input{
 .wrapper{
   padding-left: 5%;
   padding-right: 5%;
+}
+.posts .tag.select{
+  transform: scale(1.02) rotate(-1deg);
+  box-shadow: 0px 0px 20px rgba(149, 153, 159, .16);
+}
+.posts .tag.drag{
+  opacity: 0;
 }
