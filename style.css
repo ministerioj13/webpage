@@ -39,6 +39,13 @@ footer{
         width: 55%;
         height: 75%;
 }
+.socialLink{
+  color: gray;
+}
+.socialLink:hover{
+  text-decoration: none;
+  color: black;
+}
 hr{
         color: white;
 }
@@ -48,7 +55,6 @@ a{
 .tag{
         background-color: #C03B7A;
         border-radius: 5px;
-        cursor: move;
 }
 .socialMedia{
   padding-left: 5%;

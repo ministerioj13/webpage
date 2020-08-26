@@ -27,11 +27,14 @@
       form{
         text-align: center;
       }
+      input:focus, textarea:focus{
+        outline: none;
+      }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="send.js"></script>
   </head>
-  <body>
+  <body onload="enfocar('n');">
 		<header>
 			<nav class="navbar">
 				<div class="navbar-collapse">
@@ -46,7 +49,7 @@
 		</header>
     <div class="insc">
       <h1>Ministerio J13</h1>
-      <h3>Memoria RAM</h3>
+      <h3>Herrami3ntas</h3>
       <hr>
       <h2 style="text-align: center;">Inscripción</h2>
       <p>Este es el formulario de inscripción a esta capacitación.
@@ -66,7 +69,7 @@
             //Para reactivar el formulario se debe llenar action="https://formspree.io/ministerioj13@gmail.com"
           </script>
           <h5>Nombre</h5>
-          <input type="text" class="name" name="Nombre" placeholder="Nombre">
+          <input type="text" class="name" name="Nombre" placeholder="Nombre" id="n">
           <br>
           <h5>Email</h5>
           <input type="text" class="email" name="Email" placeholder="algo@ejemplo.com">
@@ -83,9 +86,17 @@
         </form>
       </div>
     </div>
+    <script type="text/javascript">
+      function enfocar(elemento){
+        var elemento = document.getElementById(elemento);
+        elemento.focus();
+      }
+    </script>
     <footer>
       <hr>
-      Facebook: &#64ministerioj13&nbsp&nbsp Instagram: &#64ministerioj13&nbsp&nbsp Twitter: &#64ministerioj13<br>
+      <a href="facebook.com/ministerioj13" class="socialLink">Facebook: &#64ministerioj13</a>&nbsp&nbsp
+			<a href="instagram.com/ministerioj13" class="socialLink">Instagram: &#64ministerioj13</a>&nbsp&nbsp
+			<a href="twitter.com/ministerioj13" class="socialLink">Twitter: &#64ministerioj13</a><br>
       &copy; 2020 - Ministerio J13
     </footer>
   </body>
