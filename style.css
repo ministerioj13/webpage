@@ -8,13 +8,39 @@ h3, h4{
         background-color: #141E4D;
         color: gray;
 }
+.navbar{
+  position: fixed;
+  top: 1;
+}
 p, .login{
         color: #141E4D;
+}
+header{
+  padding-bottom: 5%;
 }
 footer{
         color: gray;
         text-align: center;
         font-size: 15px;
+}
+.preloader{
+  width: 70px;
+  height: 70px;
+  border: 10px solid #703E8F;
+  border-top: 10px solid #eedd79;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes gira {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 .jumbotron{
         padding: 7%;
@@ -135,4 +161,18 @@ img, input{
 }
 .edit{
   padding: 5%;
+}
+.col-md-4 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
