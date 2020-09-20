@@ -19,7 +19,9 @@ simplyCountdown('#cuenta', {
             enableUtc: true, //Use UTC as default
             onEnd: function() {
               //alert('Bienvenidos a nuestra reunion de domingo!');
-              window.location.href = "";
+              window.location.href = "https://us02web.zoom.us/j/82713339740";
+              /*lINK: jueves  (https://us02web.zoom.us/j/84307157612)
+                LINK: domingo (https://us02web.zoom.us/j/89751779761)*/
               return; }, //Callback on countdown end, put your own function here
             refresh: 1000, // default refresh every 1s
             sectionClass: 'simply-section', //section css class
