@@ -103,37 +103,37 @@
 		<!-- THIS IS A SEPARATION -->
 		<div class="edit" id="editar" style="display: none;">
 			<input type="button" class="btn btn-danger" name="close" value="X" style="text-align: right;" onclick="cerrar('editar');">
-			<div class="tag" data-id="devocional2">
+			<div class="tag" data-id="devocional2" style="padding-bottom: .5%;">
 				<h3>Devocional del dia</h3>
-				<textarea placeholder="Devocional aqui" rows="6" class="comment" id="devo"></textarea>
+				<!-- <textarea placeholder="Devocional aqui" rows="6" class="comment" id="devo"></textarea> -->
 				<div class="status"></div>
 				<input type="submit" class="btn btn-primary" value="Cargar" onclick="cargar('devo', 'text-devocional');"></input>
 			</div>
-			<div class="tag" data-id="peticiones2">
+			<div class="tag" data-id="peticiones2" style="padding-bottom: .5%;">
 				<h3>Peticiones</h3>
 				<textarea placeholder="Texto para peticiones aqui" rows="6" class="comment" id="pet"></textarea>
 				<div class="status"></div>
 				<button class="btn btn-primary" onclick="cargar('pet', 'text-peticiones');">Cargar</button>
 			</div>
-			<div class="tag" data-id="estudio2">
+			<div class="tag" data-id="estudio2" style="padding-bottom: .5%;">
 					<h3>Estudio Biblico</h3>
 					<textarea placeholder="Texto para Estudio Biblico aqui" rows="6" class="comment" id="est"></textarea>
 				<div class="status"></div>
 					<button class="btn btn-primary" onclick="cargar('est', 'text-estudio');">Cargar</button>
 			</div>
-			<div class="tag" data-id="grupo2">
+			<div class="tag" data-id="grupo2" style="padding-bottom: .5%;">
 					<h3>Reunion del Domingo</h3>
 					<textarea placeholder="Texto para el grupo aqui" rows="6" id=""></textarea>
 					<div class="status"></div>
 					<button class="btn btn-primary" onclick="cargar('gru', 'text-grupo');">Cargar</button>
 			</div>
-			<div class="tag" style="text-align: center;" id="ver" data-id="versiculo2">
+			<div class="tag" style="text-align: center;" id="ver" data-id="versiculo2" style="padding-bottom: .5%;">
 				<h3>Versiculo</h3>
 				<img src="Versiculo.png" height="50%" width="50%" style="padding-bottom: 1%;"><br>
 				<div class="status"></div>
 				<button class="btn btn-primary" onclick="cargar('ver', 'text-versiculo');">Cargar</button>
 			</div>
-			<div class="tag" data-id="capacitacion2">
+			<div class="tag" data-id="capacitacion2" style="padding-bottom: .5%;">
 				<h3>¡¡¡Capacitación!!!</h3>
 				<textarea placeholder="Texto para capacitacion aqui" rows="6" id=""></textarea>
 				<div class="status"></div>
@@ -145,10 +145,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 		<script src="move.js"></script>
 		<script type="text/javascript">
-				window.onload = function () {
-				    var url = document.location.href;
-			    	document.getElementById('devoR').innerHTML = url;
-				}
 				function editar(){
 					var p = prompt("Enter password to edit this page");
 					if (p == "Juan13.13"){
@@ -159,10 +155,11 @@
 				}
 				function cargar(emisor, receptor){
 					var elemento = document.createElement("p");
-					var t = document.getElementById(emisor).innerHTML;
+					var t = prompt("Ingrese el nuevo contenido");
 					var texto = document.createTextNode(t);
 					elemento.appendChild(texto);
-					document.getElementById(receptor).appendChild(elemento);
+					document.getElementById(receptor).innerHTML = "";
+					document.getElementById(receptor).innerHTML = t;
 				}
 				function mostrar(elemento){
 					var a = document.getElementById(elemento);
