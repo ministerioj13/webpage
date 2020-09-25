@@ -1,8 +1,8 @@
 simplyCountdown('#cuenta', {
             year: 2020, // required
             month: 9, // required
-            day: 24, // required
-            hours: 11, // Default is 0 [0-23] integer. Is our time - 6 hours.
+            day: 27, // required
+            hours: 12, // Default is 0 [0-23] integer. Is our time - 6 hours.
             minutes: 0, // Default is 0 [0-59] integer
             seconds: 0, // Default is 0 [0-59] integer
             words: { //words displayed into the countdown
@@ -19,7 +19,7 @@ simplyCountdown('#cuenta', {
             enableUtc: true, //Use UTC as default
             onEnd: function() {
               //alert('Bienvenidos a nuestra reunion de domingo!');
-              window.location.href = "https://us02web.zoom.us/j/84218300605";
+              window.location.href = "https://us02web.zoom.us/j/82713339740";
               /*lINK: jueves  (https://us02web.zoom.us/j/84307157612)
                 LINK: domingo (https://us02web.zoom.us/j/89751779761)*/
               return; }, //Callback on countdown end, put your own function here
