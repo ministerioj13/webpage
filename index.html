@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./style.css">
 				<link rel="icon" href="logo.png" type="image/png">
 	</head>
-	<body>
+	<body onload="saludo();">
 		<header>
 			<nav class="navbar">
 				<div class="navbar-collapse">
@@ -40,6 +40,10 @@
 						</a>
 					</p>
 			</div>
+		</div>
+
+		<div>
+			<h2 id="saludo" style="text-align: center; color: #141E4D;"></h2>
 		</div>
 
 		<div class="row" style="text-align: justify;">
@@ -102,6 +106,23 @@
 					Su navegador no soporta esta caracteristica, lo sentimos :(
 			</video> -->
 		</div>
+		<script type="text/javascript">
+			function saludo(){
+				var dia = new Date();
+				var hora = dia.getHours();
+				var saludo = document.getElementById('saludo');
+				if (hora < 12){
+					console.log('Buenos días');
+					saludo.innerText = 'Buenos días';
+				} else if (hora < 18) {
+					console.log('Buenas tardes');
+					saludo.innerText = 'Buenas tardes';
+				} else {
+					console.log('Buenas noches');
+					saludo.innerText = 'Buenas noches';
+				}
+			}
+		</script>
 		<footer>
 			<hr>
 			<a href="https://www.facebook.com/ministerioj13" class="socialLink" target="_blank">Facebook: &#64ministerioj13</a>&nbsp&nbsp

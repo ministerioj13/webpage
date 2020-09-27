@@ -36,9 +36,34 @@
 		</header>
 		<div class="content">
 			<div class="tag">
+				<h3>Domingo - 27/9/2020 (¿Quién es mi semejante? [El buen samaritano])</h3>
+				&nbsp&nbsp David Cancino
+				<p><a href="El_buen_samaritano.rar" target="_blank" class="btn btn-info">Descargar</a></p>
+			</div>
+			<div class="tag">
+				<h3>Jueves - 24/9/2020 ()</h3>
+				&nbsp&nbsp Alejandro Samayoa
+				<p><a target="_blank" class="btn btn-light">Descargar</a></p>
+			</div>
+			<div class="tag">
+				<h3>Domingo - 20/9/2020 (¡Donge Nace!)</h3>
+				&nbsp&nbsp Tracy Batchelor
+				<p><a class="btn btn-light">Descargar</a></p>
+			</div>
+			<div class="tag">
+				<h3>Capacitación - 17/9/2020 (Herrami3ntas)</h3>
+				&nbsp&nbsp MJ13
+				<p><button target="_blank" class="btn btn-info" onclick="descargar('redessociales', 'Herrami3ntas.rar');">Descargar</button></p>
+			</div>
+			<div class="tag">
+				<h3>Domingo - 6/9/2020 (Shema)</h3>
+				&nbsp&nbsp Alejandro Samayoa
+				<p><a class="btn btn-light">Descargar</a></p>
+			</div>
+			<div class="tag">
 				<h3>Jueves - 10/9/2020 (Todo en 1)</h3>
 				&nbsp&nbsp MJ13
-				<p><a target="_blank" class="btn btn-info">Descargar</a></p>
+				<p><a href="Todo_en_1.pptx" target="_blank" class="btn btn-info">Descargar</a></p>
 			</div>
 			<div class="tag">
 				<h3>Domingo - 6/9/2020 (En el Sinaí)</h3>
@@ -156,6 +181,14 @@
 				var password = prompt("Ingrese la contraseña");
 				if (password == "mj13"){
 					document.location.href="Deleite_MJ13_Material.pdf";
+				} else{
+					alert("Contraseña incorrecta");
+				}
+			}
+			function descargar(password, material){
+				var p = prompt("Ingrese la contraseña");
+				if (p == password){
+					document.location.href=material;
 				} else{
 					alert("Contraseña incorrecta");
 				}
