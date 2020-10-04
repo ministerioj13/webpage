@@ -34,7 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="send.js"></script>
   </head>
-  <body onload="enfocar('n');">
+  <body onload="enfocar('n'); modoLuz();">
 		<header>
 			<nav class="navbar">
 				<div class="navbar-collapse">
@@ -90,6 +90,24 @@
       function enfocar(elemento){
         var elemento = document.getElementById(elemento);
         elemento.focus();
+      }
+
+      function modoLuz(){
+        var dia = new Date();
+        var hora = dia.getHours();
+        if (hora < 6){
+          document.body.setAttribute("style", "background-color: gray;");
+          console.log('Madrugada');
+        } else if (hora < 12){
+          document.body.setAttribute("style", "background-color: white;");
+          console.log('Buenos días');
+        } else if (hora < 18) {
+          document.body.setAttribute("style", "background-color: gray;");
+          console.log('Buenas tardes');
+        } else {
+          document.body.setAttribute("style", "background-color: gray;")
+          console.log('Buenas noches');
+        }
       }
     </script>
     <footer>

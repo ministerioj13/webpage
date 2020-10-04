@@ -37,6 +37,7 @@
 			            Ver Cita Biblica &raquo;
 			        </a>
 			    </p>
+					&nbsp
 					<p style="text-align: right; display: inline;">
 						<a href="activities.html?pagename=activities#devocional" class="btn btn-success btn-lg">
 								Devocional del dia &raquo;
@@ -117,13 +118,21 @@
 				var dia = new Date();
 				var hora = dia.getHours();
 				var saludo = document.getElementById('saludo');
-				if (hora < 12){
+				if (hora < 6){
+					document.body.setAttribute("style", "background-color: gray;");
+					console.log('Madrugada');
+					saludo.innerText = 'Buenos días';
+				} else if (hora < 12){
+					document.body.setAttribute("style", "background-color: white;");
 					console.log('Buenos días');
 					saludo.innerText = 'Buenos días';
 				} else if (hora < 18) {
+					document.body.setAttribute("style", "background-color: white;");
 					console.log('Buenas tardes');
 					saludo.innerText = 'Buenas tardes';
 				} else {
+					document.body.setAttribute("style", "background-color: gray;")
+					document.getElementById("btn btn-secondary").setAttribute("class", "btn btn-light");
 					console.log('Buenas noches');
 					saludo.innerText = 'Buenas noches';
 				}

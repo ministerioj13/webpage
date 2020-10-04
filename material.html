@@ -21,7 +21,7 @@
 			</style>
 			<!-- <script src="access.js"></script> -->
 	</head>
-	<body>
+	<body onloadstart="modoLuz();">
 		<header>
 			<nav class="navbar">
 				<div class="navbar-collapse">
@@ -198,6 +198,24 @@
 					alert("Contraseña incorrecta");
 				}
 			}
+
+			function modoLuz(){
+        var dia = new Date();
+        var hora = dia.getHours();
+        if (hora < 6){
+          document.body.setAttribute("style", "background-color: gray;");
+          console.log('Madrugada');
+        } else if (hora < 12){
+          document.body.setAttribute("style", "background-color: white;");
+          console.log('Buenos días');
+        } else if (hora < 18) {
+          document.body.setAttribute("style", "background-color: white;");
+          console.log('Buenas tardes');
+        } else {
+          document.body.setAttribute("style", "background-color: gray;")
+          console.log('Buenas noches');
+        }
+      }
 		</script>
 		<footer>
 			<hr>

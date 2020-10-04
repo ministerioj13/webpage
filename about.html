@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="icon" href="logo.png" type="image/png">
   </head>
-  <body>
+  <body onloadstart="modoLuz();">
     <header>
       <nav class="navbar">
         <div class="navbar-collapse">
@@ -60,6 +60,25 @@
             <li>Evangelismo</li>
         </ul>
       </div>
+    <script>
+      function modoLuz(){
+        var dia = new Date();
+        var hora = dia.getHours();
+        if (hora < 6){
+          document.body.setAttribute("style", "background-color: gray;");
+          console.log('Madrugada');
+        } else if (hora < 12){
+          document.body.setAttribute("style", "background-color: white;");
+          console.log('Buenos días');
+        } else if (hora < 18) {
+          document.body.setAttribute("style", "background-color: white;");
+          console.log('Buenas tardes');
+        } else {
+          document.body.setAttribute("style", "background-color: gray;")
+          console.log('Buenas noches');
+        }
+      }
+    </script>
     <footer>
       <hr>
       <a href="https://www.facebook.com/ministerioj13" class="socialLink" target="_blank">Facebook: &#64ministerioj13</a>&nbsp&nbsp

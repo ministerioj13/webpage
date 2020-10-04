@@ -31,7 +31,7 @@
         </style>
 				<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 				<script src="main.js"></script>
-	</head>
+	</head onloadstart="modoLuz();">
 	<body>
 		<header>
 			<nav class="navbar">
@@ -93,6 +93,25 @@
 			<a href="https://www.instagram.com/ministerioj13" target="_blank" class="btn-red-social" style="background-color: #E1306C;"><i class="fab fa-instagram"></i></a>
 		</div>
 		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+		<script>
+			function modoLuz(){
+				var dia = new Date();
+				var hora = dia.getHours();
+				if (hora < 6){
+					document.body.setAttribute("style", "background-color: gray;");
+					console.log('Madrugada');
+				} else if (hora < 12){
+					document.body.setAttribute("style", "background-color: white;");
+					console.log('Buenos días');
+				} else if (hora < 18) {
+					document.body.setAttribute("style", "background-color: white;");
+					console.log('Buenas tardes');
+				} else {
+					document.body.setAttribute("style", "background-color: gray;")
+					console.log('Buenas noches');
+				}
+			}
+		</script>
 		<footer>
 			<hr>
 			<a href="https://www.facebook.com/ministerioj13" class="socialLink" target="_blank">Facebook: &#64ministerioj13</a>&nbsp&nbsp
