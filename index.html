@@ -62,7 +62,7 @@
 								es importante estar preparados, por eso te instamos a participar en
 								nuestras capacitaciones ya que pueden tener material util para ti.
 		        </p>
-		        <p><a class="btn btn-secondary" href="inscription.html">Capacitaciones &raquo;</a></p>
+		        <p><a class="btn btn-secondary" id="btn-inscripcion" href="inscription.html">Capacitaciones &raquo;</a></p>
 						-->
 						<h2>Jueves</h2>
 		        <p>
@@ -71,7 +71,7 @@
 		            para realizar diferentes actividades practicas que pueden ser utilizadas
 		            como herramientas en nuestro transcurso como lideres, siervos de Cristo.
 		        </p>
-						<p><a class="btn btn-secondary" href="https://us02web.zoom.us/j/84218300605" target="_blank">Estudio Biblico &raquo;</a></p>
+						<p><a class="btn btn-secondary" id="btn-jueves" href="https://us02web.zoom.us/j/84218300605" target="_blank">Estudio Biblico &raquo;</a></p>
 		    </div>
 		    <div class="col-md-4">
 		        <h2>Domingo</h2>
@@ -83,7 +83,7 @@
 		            los dones que Dios te ha dado. Puedes contactarte con nosotros e involcurarte
 		            en el link de abajo.
 		        </p>
-		        <p><a class="btn btn-secondary" href="https://us02web.zoom.us/j/82713339740" target="_blank">Unirme &raquo;</a></p>
+		        <p><a class="btn btn-secondary" id="btn-domingo" href="https://us02web.zoom.us/j/82713339740" target="_blank">Unirme &raquo;</a></p>
 						<!--
 						LINK JUEVES: https://us02web.zoom.us/j/84307157612
 						LINK DOMINGO: https://us02web.zoom.us/j/89751779761
@@ -99,7 +99,7 @@
 		            espiritualmente, seguir capacitandonos y estar al tanto de todas nuestras
 		            actividades, siguenos en nuestras redes como MJ-13
 		        </p>
-		        <p><a class="btn btn-secondary" href="https://facebook.com/ministerioj13" target="_blank">Siguenos &raquo;</a></p>
+		        <p><a class="btn btn-secondary" id="btn-redes" href="https://facebook.com/ministerioj13" target="_blank">Siguenos &raquo;</a></p>
 		    </div>
 		</div>
 		<div class="presentacion" style="text-align: center;">
@@ -120,19 +120,26 @@
 				var saludo = document.getElementById('saludo');
 				if (hora < 6){
 					document.body.setAttribute("style", "background-color: gray;");
+					document.getElementById("saludo").setAttribute("style", "color: #EEDD79; text-align: center;");
+					/* document.getElementById("btn-inscripcion").setAttribute("class", "btn btn-light");
+					document.getElementById("btn-jueves").setAttribute("class", "btn btn-light");
+					document.getElementById("btn-domingo").setAttribute("class", "btn btn-light");
+					document.getElementById("btn-redes").setAttribute("class", "btn btn-light"); */
 					console.log('Madrugada');
 					saludo.innerText = 'Buenos días';
 				} else if (hora < 12){
 					document.body.setAttribute("style", "background-color: white;");
+					document.getElementById("saludo").setAttribute("style", "color: #141E4D; text-align: center;");
 					console.log('Buenos días');
 					saludo.innerText = 'Buenos días';
 				} else if (hora < 18) {
 					document.body.setAttribute("style", "background-color: white;");
+					document.getElementById("saludo").setAttribute("style", "color: #141E4D; text-align: center;");
 					console.log('Buenas tardes');
 					saludo.innerText = 'Buenas tardes';
 				} else {
-					document.body.setAttribute("style", "background-color: gray;")
-					document.getElementById("btn btn-secondary").setAttribute("class", "btn btn-light");
+					document.body.setAttribute("style", "background-color: gray;");
+					document.getElementById("saludo").setAttribute("style", "color: #EEDD79; text-align: center;");
 					console.log('Buenas noches');
 					saludo.innerText = 'Buenas noches';
 				}
