@@ -65,7 +65,7 @@
 		        <p><a class="btn btn-secondary" id="btn-inscripcion" href="inscription.html">Capacitaciones &raquo;</a></p>
 						-->
 						<h2>Jueves</h2>
-		        <p>
+		        <p id="t-jueves">
 		            La idea de una reunion los dias jueves es tener un Estudio Biblico
 		            que nos ayude a fortalecer nuestros conocmientos y estar capacitados
 		            para realizar diferentes actividades practicas que pueden ser utilizadas
@@ -75,7 +75,7 @@
 		    </div>
 		    <div class="col-md-4">
 		        <h2>Domingo</h2>
-		        <p>
+		        <p id="t-domingo">
 		            ¡El Dia del Señor! Reunirnos este dia es muy grato y buscamos fortalecer
 		            nuestra relacion personal con Dios disfrutando de su presencia a traves
 		            de su palabra, oracion y un buen tiempo de alabanza a El. Tambien compartimos
@@ -91,7 +91,7 @@
 				</div>
 		    <div class="col-md-4">
 		        <h2>Redes Sociales</h2>
-		        <p>
+		        <p id="t-redes">
 		            Si eres de esas personas que les gusta estar informadas y pasar
 		            tiempo en las redes sociales, este es tu espacio. Visita nuestra pagina
 		            de Facebook, Twitter, Instagram, entre otras. En nuestras redes compartimos
@@ -118,13 +118,15 @@
 				var dia = new Date();
 				var hora = dia.getHours();
 				var saludo = document.getElementById('saludo');
+				var tRedes = document.getElementById('t-redes');
+				var tJueves = document.getElementById('t-jueves');
+				var tDomingo = document.getElementById('t-domingo');
 				if (hora < 6){
 					document.body.setAttribute("style", "background-color: gray;");
 					document.getElementById("saludo").setAttribute("style", "color: #EEDD79; text-align: center;");
-					/* document.getElementById("btn-inscripcion").setAttribute("class", "btn btn-light");
-					document.getElementById("btn-jueves").setAttribute("class", "btn btn-light");
+					document.getElementById("btn-redes").setAttribute("class", "btn btn-light");
 					document.getElementById("btn-domingo").setAttribute("class", "btn btn-light");
-					document.getElementById("btn-redes").setAttribute("class", "btn btn-light"); */
+					document.getElementById("btn-jueves").setAttribute("class", "btn btn-light");
 					console.log('Madrugada');
 					saludo.innerText = 'Buenos días';
 				} else if (hora < 12){
@@ -140,6 +142,12 @@
 				} else {
 					document.body.setAttribute("style", "background-color: gray;");
 					document.getElementById("saludo").setAttribute("style", "color: #EEDD79; text-align: center;");
+					document.getElementById("btn-redes").setAttribute("class", "btn btn-light");
+					document.getElementById("btn-domingo").setAttribute("class", "btn btn-light");
+					document.getElementById("btn-jueves").setAttribute("class", "btn btn-light");
+					tRedes.setAttribute("style", "text-align: justify; color: white;");
+					tJueves.setAttribute("style", "text-align: justify; color: white;");
+					tDomingo.setAttribute("style", "text-align: justify; color: white;");
 					console.log('Buenas noches');
 					saludo.innerText = 'Buenas noches';
 				}
