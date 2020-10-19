@@ -17,14 +17,6 @@
 						border-top: none;
 						border-radius: 0px;
 					}
-					.submit{
-						border-radius: 5px;
-						background-color: lightgray;
-						color: black;
-						width: 15%;
-						height: 4%;
-						border-color: lightgray;
-					}
 					input:focus, textarea:focus{
 						outline: none;
 					}
@@ -49,7 +41,7 @@
 			<span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
 		</span>
 		<div class="content">
-			<address>
+			<address id="hd-info">
 			    Quetzaltenango, Quetzaltenango, Guatemala<br />
 			    Centroamerica<br />
 			    <abbr title="Telefono">Telefono:</abbr>
@@ -57,8 +49,8 @@
 			</address>
 
 			<address>
-			    <strong>Capacitaciones:</strong>   <a href="mailto:Ministerioj13@gmail.com?subject=Capacitaciones&body=Quisiera_mas_info_de_las_capacitaciones_o_quiero_que_impartan_una" target="_blank">ministerioj13@gmail.com</a><br />
-			    <strong>Peticiones:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="mailto:Ministerioj13@gmail.com?subject=Peticiones&body=Puedes_dejarnos_tus_peticiones,_las_tendremos_en_oracion" target="_blank">ministerioj13@gmail.com</a>
+			    <strong>Capacitaciones:</strong>   <a id="e-cap" href="mailto:Ministerioj13@gmail.com?subject=Capacitaciones&body=Quisiera_mas_info_de_las_capacitaciones_o_quiero_que_impartan_una" target="_blank">ministerioj13@gmail.com</a><br />
+			    <strong>Peticiones:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a id="e-or" href="mailto:Ministerioj13@gmail.com?subject=Peticiones&body=Puedes_dejarnos_tus_peticiones,_las_tendremos_en_oracion" target="_blank">ministerioj13@gmail.com</a>
 			</address>
 		</div>
 		<div class="contact_us">
@@ -81,7 +73,7 @@
 
 				</div>
 				<br>
-				<button type="submit" class="submit" style="border-radius: 5px; color: white; background-color: #868e96;">Enviar</button><br><br>
+				<button type="submit" class="btn btn-secondary" id="enviar">Enviar</button><br><br>
 			</form>
 		</div>
 		<br>
@@ -97,8 +89,19 @@
 			function modoLuz(){
 				var dia = new Date();
 				var hora = dia.getHours();
+				var hdi = document.getElementById("hd-info");
+				var link1 = document.getElementById("e-cap"), link2 = document.getElementById("e-or");
+				var etiquetas = document.getElementsByTagName("label");
+				var l = etiquetas.length;
 				if (hora < 6){
-					document.body.setAttribute("style", "background-color: gray;");
+					document.body.setAttribute("style", "background-color: #828282;");
+					document.getElementById("enviar").setAttribute("class", "btn btn-primary");
+					hdi.setAttribute("style", "color: white;");
+					link1.setAttribute("style", "color: #eedd79; text-decoration: none;");
+					link2.setAttribute("style", "color: #eedd79; text-decoration: none;");
+					for (var n=0; n<l; n++){
+						etiquetas[n].setAttribute("style", "color: #eedd79");
+					}
 					console.log('Madrugada');
 				} else if (hora < 12){
 					document.body.setAttribute("style", "background-color: white;");
@@ -107,7 +110,14 @@
 					document.body.setAttribute("style", "background-color: white;");
 					console.log('Buenas tardes');
 				} else {
-					document.body.setAttribute("style", "background-color: gray;")
+					document.body.setAttribute("style", "background-color: #828282;")
+					document.getElementById("enviar").setAttribute("class", "btn btn-primary");
+					hdi.setAttribute("style", "color: white;");
+					link1.setAttribute("style", "color: #eedd79; text-decoration: none;");
+					link2.setAttribute("style", "color: #eedd79; text-decoration: none;");
+					for (var n=0; n<l; n++){
+						etiquetas[n].setAttribute("style", "color: #eedd79");
+					}
 					console.log('Buenas noches');
 				}
 			}

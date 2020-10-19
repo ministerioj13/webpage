@@ -12,7 +12,7 @@ h3, h4{
   position: fixed;
   top: 1;
 }
-p, .login{
+p, .login, li{
         color: #141E4D;
 }
 header{
