@@ -10,7 +10,7 @@
 	<body onload="saludo();">
 		<header>
 			<nav class="navbar">
-				<div class="navbar-collapse">
+				<div class="navbar-collapse" style="display: inline;">
 					<a href="index.html"><img src="logo.png" width="4%" height="4%" href="index.html"></a>
 					<a href="index.html" class="navbar-brand" style="color: gray;">Ministerio J13</a>&nbsp&nbsp&nbsp&nbsp
 					<a class="nav-item" href="about.html?pagename=about#vid" style="color: gray;">Sobre nosotros...</a>&nbsp&nbsp&nbsp&nbsp
@@ -43,6 +43,11 @@
 								Devocional del dia &raquo;
 						</a>
 					</p>
+
+					<div style="text-align: right;">
+						<a id="nom-b" onclick="nombre();" style="text-align: right; color: gray; font-size: 20px;">Presentarme</a>
+					</div>
+
 			</div>
 		</div>
 
@@ -127,6 +132,9 @@
 					document.getElementById("btn-redes").setAttribute("class", "btn btn-light");
 					document.getElementById("btn-domingo").setAttribute("class", "btn btn-light");
 					document.getElementById("btn-jueves").setAttribute("class", "btn btn-light");
+					tRedes.setAttribute("style", "text-align: justify; color: white;");
+					tJueves.setAttribute("style", "text-align: justify; color: white;");
+					tDomingo.setAttribute("style", "text-align: justify; color: white;");
 					console.log('Madrugada');
 					saludo.innerText = 'Buenos días';
 				} else if (hora < 12){
@@ -151,6 +159,23 @@
 					console.log('Buenas noches');
 					saludo.innerText = 'Buenas noches';
 				}
+			}
+
+			function nombre(){
+				var nombre = prompt("Bienvenido, ingresa tu nombre por favor...");
+				var saludo = document.getElementById('saludo');
+				var dia = new Date();
+				var hora = dia.getHours();
+				if (hora < 12){
+					saludo.innerHTML = "Buenos días " + nombre;
+				} else if (hora < 18) {
+					saludo.innerHTML = "Buenas tardes " + nombre;
+				} else{
+					saludo.innerHTML = "Buenas noches " + nombre;
+				}
+				var presentarme = document.getElementById("nom-b");
+				presentarme.setAttribute("style", "display: none;")
+				localStorage.setItem("Nombre", nombre);
 			}
 		</script>
 		<footer>

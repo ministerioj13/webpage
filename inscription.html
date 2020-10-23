@@ -82,7 +82,7 @@
           </div>
           <!-- <p style="color: red;">Nota: Recuerda marcar la caja de 'No soy un robot' al finalizar para que se envie tu inscripción</p>
           -->
-          <input type="Submit" name="Submit" value="Inscribirme" class="btn btn-light" onclick="alert('La inscriptión ha finalizado :(');">
+          <input type="Submit" name="Submit" value="Inscribirme" class="btn btn-light" id="btn-ins" onclick="alert('La inscriptión ha finalizado :(');">
         </form>
       </div>
     </div>
@@ -95,8 +95,17 @@
       function modoLuz(){
         var dia = new Date();
         var hora = dia.getHours();
+        var texto = document.getElementsByTagName("p"), cit = texto.length;
+        var campos = document.getElementsByTagName("h5"), cic = campos.length;
         if (hora < 6){
           document.body.setAttribute("style", "background-color: #828282;");
+          for (var n=0; n<cit; n++){
+            texto[n].setAttribute("style", "color: white;");
+          }
+          for (var n=0; n<cic; n++){
+            campos[n].setAttribute("style", "color: ##eedd79");
+          }
+          document.getElementById("btn-ins").setAttribute("class", "btn btn-primary");
           console.log('Madrugada');
         } else if (hora < 12){
           document.body.setAttribute("style", "background-color: white;");
@@ -106,6 +115,13 @@
           console.log('Buenas tardes');
         } else {
           document.body.setAttribute("style", "background-color: #828282;")
+          for (var n=0; n<cit; n++){
+            texto[n].setAttribute("style", "color: white; display: inline;");
+          }
+          for (var n=0; n<cic; n++){
+            campos[n].setAttribute("style", "color: ##eedd79");
+          }
+          document.getElementById("btn-ins").setAttribute("class", "btn btn-primary");
           console.log('Buenas noches');
         }
       }
