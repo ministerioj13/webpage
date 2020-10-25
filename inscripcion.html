@@ -34,7 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="send.js"></script>
   </head>
-  <body onload="enfocar('n'); modoLuz();">
+  <body onload="enfocar('n2'); modoLuz();">
     <header>
       <nav class="navbar">
         <div class="navbar-collapse">
@@ -82,7 +82,7 @@
           </div>
           <!-- <p style="color: red;">Nota: Recuerda marcar la caja de 'No soy un robot' al finalizar para que se envie tu inscripción</p>
           -->
-          <input type="Submit" name="Submit" value="Inscribirme-ext" class="btn btn-light" id="btn-ins2">
+          <input type="Submit" name="Submit-ext" value="Inscribirme" class="btn btn-light" id="btn-ins2">
         </form>
       </div>
     </div>
@@ -105,7 +105,7 @@
           for (var n=0; n<cic; n++){
             campos[n].setAttribute("style", "color: ##eedd79");
           }
-          document.getElementById("btn-ins").setAttribute("class", "btn btn-primary");
+          document.getElementById("btn-ins2").setAttribute("class", "btn btn-secondary");
           console.log('Madrugada');
         } else if (hora < 12){
           document.body.setAttribute("style", "background-color: white;");
@@ -121,7 +121,7 @@
           for (var n=0; n<cic; n++){
             campos[n].setAttribute("style", "color: ##eedd79");
           }
-          document.getElementById("btn-ins").setAttribute("class", "btn btn-primary");
+          document.getElementById("btn-ins2").setAttribute("class", "btn btn-secondary");
           console.log('Buenas noches');
         }
       }
