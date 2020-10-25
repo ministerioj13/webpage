@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MJ13 - Inscripciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="logo.png" type="img/png">
+    <style>
+      input, textarea{
+        border-radius: 0%;
+        border-color: #141E4D;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 45%;
+        border: 0.5%;
+      }
+      .Info{
+        padding-left: 27.5%;
+      }
+      h4{
+        display: inline;
+        color: #703E8F;
+      }
+      form{
+        text-align: center;
+      }
+      input:focus, textarea:focus{
+        outline: none;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="send.js"></script>
+  </head>
+  <body onload="enfocar('n'); modoLuz();">
+    <header>
+      <nav class="navbar">
+        <div class="navbar-collapse">
+          <a href="index.html"><img src="logo.png" width="4%" height="4%" href="index.html"></a>
+          <a href="index.html" class="navbar-brand" style="color: gray;">Ministerio J13</a>&nbsp&nbsp&nbsp&nbsp
+          <a class="nav-item" href="about.html?pagename=about#vid" style="color: gray;">Sobre nosotros...</a>&nbsp&nbsp&nbsp&nbsp
+          <a class="nav-item" href="contact.html" style="color: gray;">Contactanos</a>&nbsp&nbsp&nbsp&nbsp
+          <a class="nav-item" href="activities.html" style="color: gray;">Actividades</a>&nbsp&nbsp&nbsp&nbsp
+          <a class="nav-item" href="material.html" style="color: gray;">Material</a>
+        </div>
+      </nav>
+    </header>
+    <div class="insc">
+      <h1>Ministerio J13</h1>
+      <h3>ADN del Cristiano</h3>
+      <hr>
+      <h2 style="text-align: center;">Inscripción</h2>
+      <p>Este es el formulario de inscripción a esta capacitación.
+        Te recordamos llenarlo para que puedas acceder a ella.
+        Las inscripciones se cierran el 9-11-2020 a las 20:00.</p>
+      <hr>
+      <div class="Info">
+        <h4>Tema</h4>&nbsp&nbsp&nbsp&nbsp<p style="display: inline;">Acercándonos a Dios</p><br>
+        <h4>Dia</h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<p style="display: inline;">13/11/2020</p><br>
+        <h4>Hora</h4>&nbsp&nbsp&nbsp&nbsp&nbsp<p style="display: inline;">18:00 hrs</p><br>
+      </div>
+      <hr>
+      <div class="inscription-form">
+        <form method="post">
+          <script>
+            //Para poder desactivar al formulario se debe eliminar el link de action y cambiar el boton a class="btn btn-light"
+            //Para reactivar el formulario se debe llenar action="https://formspree.io/ministerioj13@gmail.com"
+          </script>
+          <h5>Nombre</h5>
+          <input type="text" class="name" name="Nombre" placeholder="Nombre" id="n">
+          <br>
+          <h5>Email</h5>
+          <input type="text" class="email" name="Email" placeholder="algo@ejemplo.com">
+          <br>
+          <h5>¿Qué esperas de esta capacitación?</h5>
+          <textarea name="text" class="comment" name="Comentario" rows="4" cols="60" placeholder="Tu opinión aquí" style="width: 65%;"></textarea>
+          <br>
+          <div class="status">
+
+          </div>
+          <!-- <p style="color: red;">Nota: Recuerda marcar la caja de 'No soy un robot' al finalizar para que se envie tu inscripción</p>
+          -->
+          <input type="Submit" name="Submit" value="Inscribirme" class="btn btn-light" id="btn-ins" onclick="alert('La inscriptión ha finalizado :(');">
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function enfocar(elemento){
+        var elemento = document.getElementById(elemento);
+        elemento.focus();
+      }
+
+      function modoLuz(){
+        var dia = new Date();
+        var hora = dia.getHours();
+        var texto = document.getElementsByTagName("p"), cit = texto.length;
+        var campos = document.getElementsByTagName("h5"), cic = campos.length;
+        if (hora < 6){
+          document.body.setAttribute("style", "background-color: #828282;");
+          for (var n=0; n<cit; n++){
+            texto[n].setAttribute("style", "color: white;");
+          }
+          for (var n=0; n<cic; n++){
+            campos[n].setAttribute("style", "color: ##eedd79");
+          }
+          document.getElementById("btn-ins").setAttribute("class", "btn btn-primary");
+          console.log('Madrugada');
+        } else if (hora < 12){
+          document.body.setAttribute("style", "background-color: white;");
+          console.log('Buenos días');
+        } else if (hora < 18) {
+          document.body.setAttribute("style", "background-color: gray;");
+          console.log('Buenas tardes');
+        } else {
+          document.body.setAttribute("style", "background-color: #828282;")
+          for (var n=0; n<cit; n++){
+            texto[n].setAttribute("style", "color: white; display: inline;");
+          }
+          for (var n=0; n<cic; n++){
+            campos[n].setAttribute("style", "color: ##eedd79");
+          }
+          document.getElementById("btn-ins").setAttribute("class", "btn btn-primary");
+          console.log('Buenas noches');
+        }
+      }
+    </script>
+    <footer>
+      <hr>
+      <a href="https://www.facebook.com/ministerioj13" class="socialLink" target="_blank">Facebook: &#64ministerioj13</a>&nbsp&nbsp
+      <a href="https://www.instagram.com/ministerioj13" class="socialLink" target="_blank">Instagram: &#64ministerioj13</a>&nbsp&nbsp
+      <a href="https://www.twitter.com/ministerioj13" class="socialLink" target="_blank">Twitter: &#64ministerioj13</a><br>
+      &copy; 2020 - Ministerio J13
+    </footer>
+  </body>
+</html>
