@@ -105,7 +105,7 @@
 						como lo hacía Jesús, te invitamos a que te inscribas. Aprenderemos lo básico para que las predicas tengan un fundamento totalmente Bíblico
 						y veremos una nueva perspectiva para transmitir la buena noticia de Jesús. La pregunta es: ¿Te animas? Inscríbite 😉
 				</p>
-				<p style="padding-bottom: 1%;"><a class="btn btn-success" href="inscription.html">Inscribirme &raquo;</a></p>
+				<p style="padding-bottom: 1%;"><a class="btn btn-secondary" id="ins-1" href="inscription.html">Inscribirme &raquo;</a></p>
 			</div>
 			<div class="tag" data-id="capacitacion">
 				<h3>ADN del Creyente</h3>
@@ -115,7 +115,7 @@
 						palabra de Dios, pero sobre todo... su presencia. Así que, si deseas volver a tu primer amor, este es el tiempo. Serás coordialmente
 						bienvenido. Dios te está llamando de vuelta a tu hogar ¿aceptas?
 				</p>
-				<p style="padding-bottom: 1%;"><a class="btn btn-success" href="inscripcion.html">Inscribirme &raquo;</a></p>
+				<p style="padding-bottom: 1%;"><a class="btn btn-secondary" id="ins-2" href="inscripcion.html">Inscribirme &raquo;</a></p>
 			</div>
 			<br>
 		</div>
@@ -198,8 +198,11 @@
 				function modoLuz(){
 					var dia = new Date();
 					var hora = dia.getHours();
+					var i1 = document.getElementById("ins-1"), i2 = document.getElementById("ins-2");
 					if (hora < 6){
 						document.body.setAttribute("style", "background-color: #828282;");
+						i1.setAttribute("class", "btn btn-light");
+						i2.setAttribute("class", "btn btn-light");
 						console.log('Madrugada');
 					} else if (hora < 12){
 						document.body.setAttribute("style", "background-color: white;");
@@ -209,6 +212,8 @@
 						console.log('Buenas tardes');
 					} else {
 						document.body.setAttribute("style", "background-color: #828282;")
+						i1.setAttribute("class", "btn btn-light");
+						i2.setAttribute("class", "btn btn-light");
 						console.log('Buenas noches');
 					}
 				}
