@@ -11,6 +11,13 @@
         		padding-left: 5%;
         		padding-right: 5%;
         	}
+					.contact_us a{
+						text-decoration: none;
+						color: #141E4D;
+					}
+					#c-redes{
+						display: none;
+					}
 					input{
 						border-left: none;
 						border-right: none;
@@ -77,6 +84,22 @@
 				<button type="submit" class="btn btn-secondary" id="enviar">Enviar</button><br><br>
 			</form>
 		</div>
+		<div class="contact_us">
+			<p id="c-redes">
+				<b>Encuéntranos en redes:</b><br>
+				<a href="https://www.facebook.com/ministerioj13" target="_blank">https://facebook.com/ministerioj13</a><br>
+				<a href="https://www.instagram.com/ministerioj13" target="_blank">https://instagram.com/ministerioj13</a><br>
+				<a href="https://www.twitter.com/ministerioj13" target="_blank">https://twitter.com/ministerioj13</a><br>
+				<a href="https://www.youtube.com/channel/UCFM7dPeAVl_SHczPjTacU9g" target="_blank">https://youtube.com/channel/UCFM7dPeAVl_SHczPjTacU9g</a><br>
+				<b>Contáctanos:</b><br>
+				<a href="mailto:ministerioj13@gmail.com" target="_blank">ministerioj13@gmail.com</a><br>
+				<b>Visita nuestra página web:</b><br>
+				<a href="https://ministerioj13.github.io/webpage/">https://ministerioj13.github.io/webpage/</a><br>
+				<b>Inscríbete:</b><br>
+				<a href="https://ministerioj13.github.io/webpage/inscription">https://ministerioj13.github.io/webpage/inscription</a>
+			</p>
+			<button class="btn btn-light" id="btn-contact" onclick="copiar('c-redes');">Contactos</button>
+		</div>
 		<br>
 		<blockquote class="twitter-tweet"><p lang="es" dir="ltr" style="color: white;">Somos un ministerio de capacitación y liderazgo. Dando espacios para desarrollarte en tu llamado. También ofrecemos capacitaciones para congregaciones o grupos. Estamos convencidos que debemos hacerlo todo con excelencia y siempre buscar más de Dios.</p>&mdash; ministerioj13 (@ministerioj13) <a href="https://twitter.com/ministerioj13/status/1310572098927177730?ref_src=twsrc%5Etfw">September 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		<br>
@@ -123,6 +146,22 @@
 					}
 					console.log('Buenas noches');
 				}
+			}
+
+			function copiar(id_elemento) {
+				var aux = document.createElement("div");
+				aux.setAttribute("contentEditable", true);
+				aux.innerHTML = document.getElementById(id_elemento).innerHTML;
+				aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+				document.body.appendChild(aux);
+				aux.focus();
+				document.execCommand("copy");
+				document.body.removeChild(aux);
+				console.log("¡Copiado!");
+				var boton = document.getElementById("btn-contact");
+				boton.setAttribute("class", "btn btn-secondary");
+				//boton.setAttribute("style", "background-color: #757272; color: white;");
+				boton.innerHTML = "Copiado";
 			}
 		</script>
 		<footer>
