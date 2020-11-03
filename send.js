@@ -4,9 +4,9 @@ $(document).ready(function (){
   $('.inscription-form').click(function (event){
     console.log('Clicked button');
 
-    var nombre = $('.name').val();
-    var email = $('.email').val();
-    var comentario = $('.comment').val();
+    var nombre = $('.name').val().trim();
+    var email = $('.email').val().trim();
+    var comentario = $('.comment').val().trim();
     var stats = $('.status');
     stats.empty();
 
