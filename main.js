@@ -4,10 +4,10 @@ $(document).ready(function (){
   $('.submit').click(function (event){
     console.log('Clicked button')
 
-    var nombre = $('.name').val()
-    var telefono = $('.phone').val()
-    var email = $('.email').val()
-    var mensaje = $('.message').val()
+    var nombre = $('.name').val().trim();
+    var telefono = $('.phone').val().trim();
+    var email = $('.email').val().trim();
+    var mensaje = $('.message').val().trim()
     var stats = $('.status')
     stats.empty()
 
