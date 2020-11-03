@@ -7,9 +7,9 @@ $(document).ready(function (){
     var nombre = $('.name').val().trim();
     var telefono = $('.phone').val().trim();
     var email = $('.email').val().trim();
-    var mensaje = $('.message').val().trim()
-    var stats = $('.status')
-    stats.empty()
+    var mensaje = $('.message').val().trim();
+    var stats = $('.status');
+    stats.empty();
 
     if (nombre.length > 0){
       stats.append('<div style="color: green;">Nombre valido</div>');
