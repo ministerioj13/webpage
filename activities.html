@@ -41,7 +41,7 @@
 					}
 				</style>
 	</head>
-	<body onload="modoLuz();">
+	<body onload="modoLuz(); Moves();">
 		<header>
 			<nav class="navbar">
 				<div class="navbar-collapse">
@@ -154,7 +154,7 @@
 		<script src="simplyCountdown.min.js"></script>
 		<script src="countdown.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-		<script src="move.js"></script>
+		<script src="move.js" id="moves"></script>
 		<script type="text/javascript">
 				function editar(){
 					var p = prompt("Enter password to edit this page");
@@ -220,6 +220,28 @@
 						i2.setAttribute("class", "btn btn-light");
 						sep.setAttribute("style", "padding: 1%; text-align: justify; border-bottom: solid 15px #828282;");
 						console.log('Buenas noches');
+					}
+				}
+
+				function isMobile(){
+    			return (
+        		(navigator.userAgent.match(/Android/i)) ||
+        		(navigator.userAgent.match(/webOS/i)) ||
+        		(navigator.userAgent.match(/iPhone/i)) ||
+        		(navigator.userAgent.match(/iPod/i)) ||
+        		(navigator.userAgent.match(/iPad/i)) ||
+        		(navigator.userAgent.match(/BlackBerry/i))
+    			);
+				}
+
+				function Moves(){
+					var resource = document.getElementById("moves");
+					if (isMobile()){
+						resource.setAttribute("src", "");
+						return 0;
+					} else{
+						resource.setAttribute("src", "move.js");
+						return 1;
 					}
 				}
 		</script>
