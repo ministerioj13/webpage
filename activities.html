@@ -41,7 +41,7 @@
 					}
 				</style>
 	</head>
-	<body onload="modoLuz(); Moves();">
+	<body onload="modoLuz(); moveOn(); luzLinks();">
 		<header>
 			<nav class="navbar">
 				<div class="navbar-collapse">
@@ -62,32 +62,35 @@
 		</div>
 		<div class="posts" style="padding-top: 1%;" id="lista">
 			<div class="tag" id="devocional" data-id="devocional">
-				<h3>Devocional del dia</h3>
-				<p id="text-devocional">
-					Querido hermano, oro para que te vaya bien en todos tus asuntos y goces de buena salud, así como prosperas espiritualmente.<br>
-					3 Juan 1:2 NVI
-					<br><br>
-					Hoy quiero hablarte de algo muy importante, que como seres humanos nos cuesta, se trata de cómo prosperar.
-					<ol>
-						<li>
-							<b>La oración</b><br>
-							La oración es fundamental. Debes hablar con Dios en cada cosa que realices. Debes consultarlo con Él ¿Por qué? Así prosperarás en tu camino. Quiero recordarte que es mejor que Dios te guíe, a que las demás personas te digan qué hacer.
-						</li>
-						<li>
-							<b>Petición</b><br>
-							No puedes decirle a Dios: "dame lo que quiero" si no tienes una petición en específico. Sabemos que Dios lo sabe todo, pero Él desea escucharte, Él decide inclinar su oído a ti para escucharte. No solo pidas por ti, pide por los demás.
-						</li>
-					</ol>
+				<div id="text-devocional">
+					<h3>Devocional del dia</h3>
 					<p>
-					Juan enseñó las palabras que Jesús le había enseñado y, más adelante , él tuvo que explicar la verdad. Quien realmente es Dios.
-					Gayo, a quien amó la verdad, vivió conforme a la palabra; no dudó ni se apartó sino que permaneció.
-					Juan se puso feliz al saber que Gayo había sido fiel. Que no dejó que alguien más viniera y cambiará la verdad por mentiras, que cambiará el bien por el mal.<br>
-					La alegría por los demás es importante siempre y cuando nosotros prosperemos de la mejor manera. No solo nos llenemos de lectura sino que actuemos conforme a lo que leemos. Es difícil, sí, pero vale la pena realmente ser un ejemplo que guíe a los demás a los brazos de Dios ❤
-					Si oras por los demás, hazlo de todo corazón para que tanto tu como las demás personas puedan crecer espiritualmente y estar más cerca del Padre que esta en los cielos.
-					<br><br>
-					Conoce la verdad y actúa conforme a la verdad. Verás como harás prosperar tu camino ❤ <br>
-					<b>Dios te bendiga</b> 💫❤
-				</p>
+						Querido hermano, oro para que te vaya bien en todos tus asuntos y goces de buena salud, así como prosperas espiritualmente.<br>
+						3 Juan 1:2 NVI
+						<br><br>
+						Hoy quiero hablarte de algo muy importante, que como seres humanos nos cuesta, se trata de cómo prosperar.
+					</p>
+						<ol>
+							<li>
+								<b>La oración</b><br>
+								La oración es fundamental. Debes hablar con Dios en cada cosa que realices. Debes consultarlo con Él ¿Por qué? Así prosperarás en tu camino. Quiero recordarte que es mejor que Dios te guíe, a que las demás personas te digan qué hacer.
+							</li>
+							<li>
+								<b>Petición</b><br>
+								No puedes decirle a Dios: "dame lo que quiero" si no tienes una petición en específico. Sabemos que Dios lo sabe todo, pero Él desea escucharte, Él decide inclinar su oído a ti para escucharte. No solo pidas por ti, pide por los demás.
+							</li>
+						</ol>
+					<p>
+						Juan enseñó las palabras que Jesús le había enseñado y, más adelante , él tuvo que explicar la verdad. Quien realmente es Dios.
+						Gayo, a quien amó la verdad, vivió conforme a la palabra; no dudó ni se apartó sino que permaneció.
+						Juan se puso feliz al saber que Gayo había sido fiel. Que no dejó que alguien más viniera y cambiará la verdad por mentiras, que cambiará el bien por el mal.<br>
+						La alegría por los demás es importante siempre y cuando nosotros prosperemos de la mejor manera. No solo nos llenemos de lectura sino que actuemos conforme a lo que leemos. Es difícil, sí, pero vale la pena realmente ser un ejemplo que guíe a los demás a los brazos de Dios ❤
+						Si oras por los demás, hazlo de todo corazón para que tanto tu como las demás personas puedan crecer espiritualmente y estar más cerca del Padre que esta en los cielos.
+						<br><br>
+						Conoce la verdad y actúa conforme a la verdad. Verás como harás prosperar tu camino ❤ <br>
+						<b>Dios te bendiga</b> 💫❤
+					</p>
+				</div>
 				<a class="btn btn-primary" style="color: white;" onclick="copiar('text-devocional');" id="btn-copiar">Copiar</a>
 			</div>
 			<div class="tag" data-id="peticiones">
@@ -258,6 +261,16 @@
 						return 1;
 					}
 				}
+
+				function moveOn(){
+					var wid = window.screen.width;
+					if (wid < 1280) {
+						console.log("Moves not allowed");
+					} else {
+						Moves();
+						console.log("Moves allowed");
+					}
+				}
 		</script>
 		<footer>
 			<hr>
@@ -266,5 +279,25 @@
 			<a href="https://www.twitter.com/ministerioj13" class="socialLink" target="_blank">Twitter: &#64ministerioj13</a><br>
             &copy; 2020 - Ministerio J13 <a onclick="editar()">e</a>
 		</footer>
+		<script type="text/javascript">
+			function luzLinks(){
+				var dia = new Date();
+				var hora = dia.getHours();
+				var links = document.getElementsByClassName("socialLink");
+				if (hora<6) {
+					for (var i=0; i<links.length; i++) {
+						links[i].setAttribute("style", "color: white;")
+					}
+				} else if (hora<12) {
+
+				} else if (hora<18) {
+
+				} else {
+					for (var i=0; i<links.length; i++) {
+						links[i].setAttribute("style", "color: white;")
+					}
+				}
+			}
+		</script>
 	</body>
 </html>
