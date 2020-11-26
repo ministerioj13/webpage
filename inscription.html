@@ -54,7 +54,7 @@
       <h2 style="text-align: center;">Inscripción</h2>
       <p>Este es el formulario de inscripción a esta capacitación.
         Te recordamos llenarlo para que puedas acceder a ella.
-        Las inscripciones se cierran el 25-11-2020 a las 18:00.</p>
+        Las inscripciones se cierran el 25-11-2020 a las 20:00.</p>
       <hr>
       <div class="Info">
         <h4>Tema</h4>&nbsp&nbsp&nbsp&nbsp<p style="display: inline;">Prédicas fuera de lo normal</p><br>
@@ -63,7 +63,7 @@
       </div>
       <hr>
       <div class="inscription-form">
-        <form method="post" action="https://formspree.io/f/mleobvze">
+        <form method="post">
           <script>
             //Para poder desactivar al formulario se debe eliminar el link de action y cambiar el boton a class="btn btn-light"
             //Para reactivar el formulario se debe llenar action="https://formspree.io/f/mleobvze"
@@ -82,7 +82,7 @@
           </div>
           <!-- <p style="color: red;">Nota: Recuerda marcar la caja de 'No soy un robot' al finalizar para que se envie tu inscripción</p>
           -->
-          <input type="Submit" name="Submit" value="Inscribirme" class="btn btn-light" id="btn-ins">
+          <input type="Submit" name="Submit" value="Inscribirme" class="btn btn-light" id="btn-ins" onclick="closed();">
         </form>
       </div>
     </div>
@@ -127,7 +127,7 @@
       }
 
       function closed(){
-        alert("Gracias por tu interes en esta capcitación. ¡Pronto tendremos más capacitaciones como esta!");
+        alert("La inscripción para esta capacitación se ha cerrado. Agradecemos tu interés en ella. Pronto tendremos más capacitacions.");
       }
     </script>
     <footer>
