@@ -1,8 +1,8 @@
 simplyCountdown('#cuenta', {
-            year: 2020, // required
-            month: 12, // required
-            day: 30, // required
-            hours: 14, // Default is 0 [0-23] integer. Is our time - 6 hours.
+            year: 2021, // required
+            month: 1, // required
+            day: 8, // required
+            hours: 11, // Default is 0 [0-23] integer. Is our time - 6 hours.
             minutes: 0, // Default is 0 [0-59] integer
             seconds: 0, // Default is 0 [0-59] integer
             words: { //words displayed into the countdown
@@ -23,6 +23,7 @@ simplyCountdown('#cuenta', {
               /*NEW
                 Link: jueves (https://us02web.zoom.us/j/84218300605)
                 Link: domingo (https://us02web.zoom.us/j/82713339740)
+                LinkÑ miercoles (https://us02web.zoom.us/j/86955615011)
                 OLD
                 lINK: jueves  (https://us02web.zoom.us/j/84307157612)
                 LINK: domingo (https://us02web.zoom.us/j/89751779761)*/
