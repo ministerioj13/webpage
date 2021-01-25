@@ -7,6 +7,7 @@ $(document).ready(function (){
     var nombre = $('.name').val().trim();
     var email = $('.email').val().trim();
     var comentario = $('.comment').val().trim();
+    email = email.replace(" ", "");
     var stats = $('.status');
     stats.empty();
 
