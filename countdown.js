@@ -19,7 +19,7 @@ simplyCountdown('#cuenta', {
             enableUtc: true, //Use UTC as default
             onEnd: function() {
               //alert('Bienvenidos a nuestra reunion de domingo!');
-              window.location.href = "https://us02web.zoom.us/j/86955615011";
+              window.location.href = "https://us02web.zoom.us/j/83367402192?pwd=ekdBUmpOS0k5U2t1V1F0dmZFUW90Zz09";
               /*NEW
                 Link: jueves (https://us02web.zoom.us/j/84218300605)
                 Link: domingo (https://us02web.zoom.us/j/82713339740)
